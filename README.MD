@@ -8,10 +8,11 @@
 EmotePops is a light weight browser source to display emotes on your Twitch streams! Emotes will appear automatically from your Twitch Chat at a random position, scale and rotation, on your Twitch Stream. Great care has been taken to ensure your emotes appear fully on the screen so you don't lose any art to the edge of the screen!
 
 ## Hosted Version
-Coming Soon!
+This is by far the easiest way to get up and running with EmotePops!
+1. Add a browser source in OBS to 'https://g2bb.github.io/hosted.html?TWITCH_USERNAME'
 
 ## Local Installation
-I recommend you to install EmotePops locally through this message to avoid any server downtime.
+You can install locally to avoid server downtime.
 1. Download this repository
 2. Extract `index.html` to a destination you will remember
 3. Open the file and update the `channel` const in the script section with your channel name
@@ -21,7 +22,7 @@ I recommend you to install EmotePops locally through this message to avoid any s
 5. Enjoy your EmotePops
 
 ## Self-Hosted Web Installation
-Self-Host this overlay on your own server. This is mostly useful for streamer houses or multiple channels so you don't have to have a copy of the same file for different channels.
+Self-Host this overlay on your own server.
 1. Download this repository
 2. Extract `hosted.html` to a destination you will remember
 3. Move it to your Webhost and change the name to `index.html`
@@ -29,9 +30,9 @@ Self-Host this overlay on your own server. This is mostly useful for streamer ho
 5. Enjoy your EmotePops
 
 ## To Do
-- [ ] BetterTwitchTV Integration
 - [x] Webserver Version
-- [ ] Hosted Version
+- [X] Hosted Version
+- [ ] BetterTwitchTV Integration
 - [ ] Youtube Integration
 - [ ] FrankerfaceZ Integration
 

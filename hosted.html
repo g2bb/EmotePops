@@ -27,15 +27,15 @@
         const channel = getUsername(); //Type your Twitch Username in in place of G2bb.
         var emotes, count = 0;
 
+        function getUsername(){
+            var URL = window.location.search;
+            return URL.split('?')[1];
+        }
+
         //Init ComfyJS and sends any emote names sent in chat through formatEmotes().
         ComfyJS.Init( channel );
         ComfyJS.onChat = ( user, message, flags, self, extra ) => {
             formatEmotes(extra.messageEmotes);
-        }
-
-        function getUsername(){
-            var URL = window.location.href;
-            return URL.split('/?')[1];
         }
 
         //Pastes the image within the bounds of the browser source at a random size, position, and rotation.
