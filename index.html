@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            overflow: hidden;
+        }
+
+        img{
+            position: absolute;
+            opacity: 60%;
+        }
+
+        .drop{
+            transition: all 3s ease-in;
+            top: 100vh !important;
+            transform: scale(0) rotate(90deg) !important;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="css.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="js.js" charset="utf-8"></script> -->
+</head>
+<body>
+    <script>
+        const channel = "G2bb"; //Type your Twitch Username in in place of G2bb.
+        var emotes, count = 0;
+
+        //Init ComfyJS and sends any emote names sent in chat through formatEmotes().
+        ComfyJS.Init( channel );
+        ComfyJS.onChat = ( user, message, flags, self, extra ) => {
+            formatEmotes(extra.messageEmotes);
+        }
+
+        //Pastes the image within the bounds of the browser source at a random size, position, and rotation.
+        function insert(url){
+            if (url == null){return};
+            var imgDestination = document.body;
+            var imgAdded = document.createElement("img");
+            imgAdded.src = url;
+            imgAdded.setAttribute("id", count);
+            imgDestination.appendChild(imgAdded);
+            ImgRandomPosition(imgAdded);
+            count++;
+        }
+
+        //Calculates where the emotes can be placed based on their random size such that they don't clip outside of the browser source.
+        function ImgRandomPosition(imgAdded){
+            var scale = randomInt(75, 300)/100;
+            var ranDeg = randomInt(-45, 45);
+            var maxWidth = $(window).width() - (112 * scale);
+            var maxHeight = $(window).height() - (112 * scale);
+            var left = (randomInt(0, maxWidth) + ((scale * 112)-112)/2) + "px";
+            var top = (randomInt(0, maxHeight) + ((scale * 112)-112)/2)  + "px";
+            var imagestyle = imgAdded.style;
+            imagestyle.top = top;
+            imagestyle.left = left;
+            imagestyle.transform = "scale(" + scale + ") rotate(" + ranDeg + "deg)";
+            drop(count);
+            cull(count);
+        }
+
+        //Create random numbers for ImgRandomPosition().
+        function randomInt(min, max) { // min and max included
+            var output = Math.floor(Math.random() * (max - min) + min);
+            return output;
+        }
+
+        //Animates the emote to drop after 3 seconds on screen.
+        function drop(num){
+            setTimeout(function(){
+                var id = this.num;
+                $("#" + num).addClass("drop");
+            }, 3000);
+        }
+
+        //Removes the emote from the DOM to save on resources.
+        function cull(num){
+            setTimeout(function(){
+                var id = "#" + num;
+                $(id).remove();
+            }, 6000);
+        }
+
+        //Takes the emote names from chat and formats their names through the URL that grabs the emote image
+        function formatEmotes(emotes) {
+            for(var i in emotes) {
+                var e = emotes[i];
+                for(var j in e) {
+                    insert('http://static-cdn.jtvnw.net/emoticons/v1/' + i + '/3.0');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
