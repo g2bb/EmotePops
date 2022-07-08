@@ -26,7 +26,7 @@ Self-Host this overlay on your own server.
 1. Download this repository
 2. Extract `hosted.html` to a destination you will remember
 3. Move it to your Webhost and change the name to `index.html`
-4. Add a browser source in OBS to `https://YOURHOST.TLD/?TWITCH_USERNAME`
+4. Add a browser source in OBS to `https://YOURHOST.TLD?TWITCH_USERNAME`
 5. Enjoy your EmotePops
 
 ## To Do
