@@ -1,15 +1,16 @@
-<center>EmotePops is a light weight browser source to display emotes on your Twitch streams!</center>
-
----
+# EmotePops
+EmotePops is a lightweight browser source to display emotes on your Twitch streams!
+<br>
 
 ![Preview Image](preview.png)
 
 ## Description
-EmotePops is a light weight browser source to display emotes on your Twitch streams! Emotes will appear automatically from your Twitch Chat at a random position, scale and rotation, on your Twitch Stream. Great care has been taken to ensure your emotes appear fully on the screen so you don't lose any art to the edge of the screen!
+EmotePops is a lightweight browser source to display emotes on your Twitch streams! Emotes will appear automatically from your Twitch Chat at a random position, scale, and rotation, on your Twitch Stream. Great care has been taken to ensure your emotes appear fully on the screen so you don't lose any art to the edge of the screen!
 
 ## Hosted Version
 This is by far the easiest way to get up and running with EmotePops!
 1. Add a browser source in OBS to 'https://g2bb.github.io/hosted.html?TWITCH_USERNAME'
+2. Enjoy your EmotePops!
 
 ## Local Installation
 You can install locally to avoid server downtime.
@@ -37,4 +38,4 @@ Self-Host this overlay on your own server.
 - [ ] FrankerfaceZ Integration
 
 ---
-<center>Created with ❤️ by [G2bb](https://twitch.tv/g2bb) - Huge thanks to @instafluff for instafluff/ComfyJS</center>
+Created with ❤️ by [G2bb](https://twitch.tv/g2bb) - Huge thanks to [Instafluff](https://github.com/instafluff/) for [ComfyJS](https://github.com/instafluff/ComfyJS)
