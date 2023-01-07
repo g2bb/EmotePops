@@ -9,7 +9,7 @@ EmotePops is a lightweight browser source to display emotes on your Twitch strea
 
 ## Hosted Version
 This is by far the easiest way to get up and running with EmotePops!
-1. Add a browser source in OBS to `https://g2bb.github.io/EmotePops.html?TWITCH_USERNAME`
+1. Add a browser source in OBS to `http://g2bb.me/StreamResources/EmotePops.html?TWITCH_USERNAME`
 2. Enjoy your EmotePops!
 
 ## Local Installation
