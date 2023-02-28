@@ -33,6 +33,7 @@ Self-Host this overlay on your own server.
 ## To Do
 - [x] Webserver Version
 - [X] Hosted Version
+- [X] Animated Emotes Support
 - [ ] BetterTwitchTV Integration
 - [ ] Youtube Integration
 - [ ] FrankerfaceZ Integration
