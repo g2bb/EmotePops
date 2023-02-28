@@ -34,9 +34,10 @@ Self-Host this overlay on your own server.
 - [x] Webserver Version
 - [X] Hosted Version
 - [X] Animated Emotes Support
-- [ ] BetterTwitchTV Integration
 - [ ] Youtube Integration
+- [ ] BetterTwitchTV Integration
 - [ ] FrankerfaceZ Integration
+- [ ] TikTok Integration?
 
 ---
 Created with ❤️ by [G2bb](https://twitch.tv/g2bb) - Huge thanks to [Instafluff](https://github.com/instafluff/) for [ComfyJS](https://github.com/instafluff/ComfyJS)
